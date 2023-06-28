@@ -17,7 +17,7 @@ app.use('/api/auth', require('./src/routes/auth.routes'))
 
 // inicio el servidor en el puerto 8080 y muestro un mensaje en consola
 app.listen(8080, ()=>{
-    console.log('server is running on port 8080');
+    console.log('server is running on port 8080'); // http://localhost:8080
 })
 
 
