@@ -1,7 +1,7 @@
 // creamos un router para manejar las rutas de autenticación
 const router = require('express').Router();
 
-const { register, login } = require('../controllers/auth.controller'); // importo la función register del controlador de autenticación
+const { register, login, getUsers, getUserById } = require('../controllers/auth.controller'); // importo la función register del controlador de autenticación
 
 // definimos las rutas
 
@@ -10,6 +10,12 @@ router.post('/register', register); // register: función que se ejecuta cuando 
 
 // http://localhost:8080/api/auth/login
 router.post('/login', login); // login: función que se ejecuta cuando se hace una petición a esta ruta
+
+// http://localhost:8080/api/auth/users
+router.get('/users',getUsers)
+
+// http://localhost:8080/api/auth/users/:id
+router.get('/users/:id', getUserById)
 
 // exportamos el router
 module.exports = router;
