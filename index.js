@@ -12,7 +12,8 @@ const app = express();
 app.use(express.json());
 
 // definimos nuestras rutas
-app.use('/api/auth', require('./src/routes/auth.routes'))
+app.use('/api/auth', require('./src/routes/auth.routes')) // ruta para usuarios
+app.use('/api/products', require('./src/routes/products.routes')) // ruta para productos
 
 
 // inicio el servidor en el puerto 8080 y muestro un mensaje en consola
